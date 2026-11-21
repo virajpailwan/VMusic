@@ -696,7 +696,7 @@ private fun WaveformProgress(progress: Float, durationMs: Long, onSeek: (Long) -
         val step = size.width / count
         val middle = size.height * 0.5f
         for (i in 0 until count) {
-            val motion = abs(sin(i * 0.56)) * 0.57f + abs(sin(i * 0.14 + 1.3)) * 0.27f
+            val motion = (abs(sin(i * 0.56)) * 0.57 + abs(sin(i * 0.14 + 1.3)) * 0.27).toFloat()
             val height = size.height * (0.18f + motion * 0.78f)
             val x = step * (i + 0.5f)
             drawLine(
